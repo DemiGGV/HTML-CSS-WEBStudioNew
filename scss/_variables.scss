@@ -1,0 +1,22 @@
+:root {
+    --primary-brand:#4D5AE5;
+    --pressed-state:#404BBF;
+    --dark:#2E2F42;
+    --success:#31D0AA;
+    --text:#434455;
+    --subtle-text:#8E8F99;
+    --accent:#E7E9FC;
+    --light:#F4F4FD;
+    --modal-overlay:#2E2F4266;
+    --hero-background:#2E2F42B3;
+
+    --shadow-box: 0 1px 6px 0 #2E2F4214;
+    --shadow-active: 
+            0 1px 6px 0 #2E2F4214,
+            0 1px 1px 0 #2E2F4229,
+            0 1px 2px 0 #2E2F4214;
+
+    --font-family-base: 'Roboto', sans-serif;
+
+    --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
