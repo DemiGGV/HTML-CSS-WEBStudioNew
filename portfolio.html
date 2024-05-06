@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 
@@ -13,6 +15,11 @@
                 <a class="logo header__logo" href="./index.html">
                     <span class="logo--blue-part">web</span>studio
                 </a>
+                <button type="button" class="modal-menu__button-open visualy-hidden">
+                    <svg width="32" height="22" class="modal__icon">
+                        <use href="./images/symbol-defs.svg#icon-burger"></use>
+                    </svg>
+                </button>
                 <ul class="header__menu">
                     <li class="header__menu__item">
                         <a class="header__menu__link" href="index.html">studio</a>
@@ -31,6 +38,31 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile menu -->
+    <div class="modal-menu visualy-hidden">
+        <button type="button" class="modal__button-close">
+            <svg width="8" height="8" class="modal__icon">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="modal__menu">
+            <li class="modal-menu__item">
+                <a class="modal-menu__link" href="index.html">studio</a>
+            </li>
+            <li class="modal-menu__item">
+                <a class="modal-menu__link" href="portfolio.html">portfolio</a>
+            </li>
+            <li class="modal-menu__item">
+                <a class="modal-menu__link" href="contacts.html">contacts</a>
+            </li>
+        </ul>
+        
+        <div class="header__contacts">
+            <a class="header__link--tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            <a class="header__link--email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </div>
+    </div>
 
     <main>
         <div class="container">
@@ -161,7 +193,7 @@
                 </ul>
             </div>
             <div class="footer__subscribtion">
-                <h3 class="footer__title">Social media</h3>
+                <h3 class="footer__title">Subscribe</h3>
                 <form action="" class="footer__subscribe__form">
                     <label for="footer__subscribe">E-mail</label>
                     <input id="footer__subscribe" type="text" class="footer__subscribe__input">
