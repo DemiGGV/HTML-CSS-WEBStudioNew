@@ -1,0 +1,71 @@
+.footer {
+    padding: 90px 15px;
+    background-color: var(--dark);
+
+    @include tablet{
+        padding: 95px 108px;
+    }
+
+    @include desktop{
+        padding: 100px 155px;
+    }
+}
+
+.footer__box {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    
+    text-align: center;
+    
+    @include tablet{
+        @include display-flex-between-center;
+        flex-direction: row;
+        text-align: left;
+    }
+
+}
+
+.footer__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    color: var(--light);
+    
+    @include tablet{
+        align-items: start;
+    }
+}
+
+.footer__logo {
+    color: inherit;
+}
+
+.footer__about__text {
+    max-width: 270px;
+}
+.footer__social {
+}
+.footer__title {
+}
+.footer__social__list {
+}
+.footer__social__item {
+}
+.footer__social__link {
+}
+.social__icon {
+}
+.footer__subscribtion {
+}
+.footer__subscribe__form {
+}
+.footer__subscribe__input {
+}
+.footer__subscribe__button {
+}
+.subscribe__icon {
+}

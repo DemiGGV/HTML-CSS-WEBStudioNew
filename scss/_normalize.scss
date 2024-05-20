@@ -98,6 +98,12 @@
  button {
    font: inherit;
  }
+
+ button {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+ }
  
  html {
    /**
@@ -135,6 +141,8 @@
   */
  svg * {
    transition-property: fill, stroke;
+   stroke: currentColor;
+   fill: currentColor;
  }
  
  /**

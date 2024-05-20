@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Portfolio</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
-            <nav class="header__nav">
-                <a class="logo header__logo" href="./index.html">
-                    <span class="logo--blue-part">web</span>studio
-                </a>
-                <button type="button" class="modal-menu__button-open visualy-hidden">
-                    <svg width="32" height="22" class="modal__icon">
-                        <use href="./images/symbol-defs.svg#icon-burger"></use>
-                    </svg>
-                </button>
-                <ul class="header__menu">
-                    <li class="header__menu__item">
-                        <a class="header__menu__link" href="index.html">studio</a>
-                    </li>
-                    <li class="header__menu__item">
-                        <a class="header__menu__link" href="portfolio.html">portfolio</a>
-                    </li>
-                    <li class="header__menu__item">
-                        <a class="header__menu__link" href="contacts.html">contacts</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__contacts">
+        <nav class="header__nav">
+            <a class="logo header__logo" href="./index.html">
+                <span class="logo--blue-part">web</span>studio
+            </a>
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="index.html" class="header__menu-link">studio</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="portfolio.html" class="header__menu-link active">portfolio</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="contacts.html" class="header__menu-link">contacts</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="header__contacts">
+            <li class="header__contacts-item">
                 <a class="header__link--tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+            <li class="header__contacts-item">
                 <a class="header__link--email" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </div>
-        </div>
+            </li>
+        </ul>
+        <button type="button" class="header__menu-button">
+            <svg width="34" height="22" class="modal__icon">
+                <use href="./images/symbol-defs.svg#icon-burger"></use>
+            </svg>
+        </button>
     </header>
 
     <!-- Mobile menu -->

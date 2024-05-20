@@ -96,6 +96,12 @@ button {
   font: inherit;
 }
 
+button {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+}
+
 html {
   /**
     Пригодится в большинстве ситуаций
@@ -106,6 +112,7 @@ html {
     Плавный скролл
    */
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -136,6 +143,8 @@ svg *[stroke] {
  */
 svg * {
   transition-property: fill, stroke;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 /**
@@ -151,16 +160,30 @@ svg * {
   }
 }
 :root {
+  /* Iris */
   --primary-brand:#4D5AE5;
+  /* OCEAN */
   --pressed-state:#404BBF;
+  /* Navy blue */
   --dark:#2E2F42;
+  /* GREEN */
   --success:#31D0AA;
+  /* SLATE */
   --text:#434455;
+  /* LIGHT SLATE */
   --subtle-text:#8E8F99;
+  /* cornflower */
   --accent:#E7E9FC;
+  /* CLOUD */
   --light:#F4F4FD;
+  /* NAVY BLUE modal */
   --modal-overlay:#2E2F4266;
+  /* GREY */
   --hero-background:#2E2F42B3;
+  /* WHITE */
+  --white-background:#FFFFFF;
+  /* Dairy */
+  --modal-background:#FCFCFC;
   --shadow-box: 0 1px 6px 0 #2E2F4214;
   --shadow-active:
           0 1px 6px 0 #2E2F4214,
@@ -170,6 +193,34 @@ svg * {
   --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 .visualy-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -182,4 +233,244 @@ svg * {
           clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
+}
+
+.container {
+  max-width: 428px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
+body {
+  font: 400 16px/24px var(--font-family-base);
+  letter-spacing: 0.02em;
+  color: var(--text);
+  background-color: var(--white-background);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 288px;
+  max-width: 428px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
+.header {
+  height: 70px;
+  padding: 24px 16px;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0px 16px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .header {
+    padding: 0px 155px;
+  }
+}
+
+.header__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font: 800 18px/21px "Raleway";
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  color: var(--dark);
+}
+
+.logo--blue-part {
+  color: var(--primary-brand);
+}
+
+.header__menu-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header__menu-button {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+
+.modal__icon {
+  color: var(--dark);
+}
+
+@media screen and (max-width: 767px) {
+  .header__menu, .header__contacts {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 120px;
+  gap: 40px;
+}
+@media screen and (min-width: 1158px) {
+  .header__menu {
+    margin-left: 75px;
+  }
+}
+
+.header__menu-link {
+  display: block;
+  padding: 24px 0;
+  text-transform: capitalize;
+  text-decoration: none;
+  font: 500 16px/24px var(--font-family-base);
+  letter-spacing: 0.02em;
+}
+
+.active {
+  position: relative;
+  display: block;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-brand);
+  border-radius: 2px;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font: 400 12px/14px var(--font-family-base);
+  letter-spacing: 0.04em;
+}
+@media screen and (min-width: 1158px) {
+  .header__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    font: 400 16px/24px var(--font-family-base);
+    letter-spacing: 0.02em;
+  }
+}
+
+.header__link--tel {
+  text-decoration: none;
+}
+
+.header__link--email {
+  text-decoration: none;
+}
+
+.footer {
+  padding: 90px 15px;
+  background-color: var(--dark);
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 95px 108px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 155px;
+  }
+}
+
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.footer__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: var(--light);
+}
+@media screen and (min-width: 768px) {
+  .footer__about {
+    align-items: start;
+  }
+}
+
+.footer__logo {
+  color: inherit;
+}
+
+.footer__about__text {
+  max-width: 270px;
 }/*# sourceMappingURL=main.css.map */
