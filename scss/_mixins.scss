@@ -43,6 +43,12 @@
     align-items: center;
 }
 
+@mixin display-flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin font-logo {
     font: 800 18px/21px 'Raleway';
     letter-spacing: 0.03em;

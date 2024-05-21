@@ -1,81 +1,112 @@
 .header {
-    height: 70px;
-    padding: 24px 16px;
+  height: 70px;
+  padding: 24px 16px;
+  @include tablet {
+    padding: 0px 16px;
+  }
+  @include desktop {
+    padding: 0px 155px;
+  }
 
-    @include tablet{
-        padding: 0px 16px;
-    }
-
-    @include desktop{
-        padding: 0px 155px;
-    }
-
-}
-
-.header__box {
+  &__box {
     @include display-flex-between-center;
-}
+  }
 
-.header__nav {
+  &__nav {
     @include display-flex-between-center;
     height: 100%;
-}
+  }
 
-.logo {
-    @include font-logo;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.header__logo {
+  &__logo {
     color: var(--dark);
-}
+  }
 
-.logo--blue-part {
-    color: var(--primary-brand)
-}
+  &__modal-menu-button {
+    @include display-flex-center-center;
 
-.header__menu-button {
-    @include display-flex-between-center;
-    @include tablet{
-        @include visualy-hidden;
+    @include tablet {
+      @include visualy-hidden;
     }
-}
+  }
 
-.modal__icon {
+  &__modal-menu-icon {
     color: var(--dark);
-}
+    stroke: currentColor;
+  }
 
-.header__menu, .header__contacts{
-    @include tablet-under{
-        @include visualy-hidden;
+  &__menu,
+  &__contacts {
+    @include tablet-under {
+      @include visualy-hidden;
     }
-}
+  }
 
-.header__menu {
+  &__menu {
     @include display-flex-between-center;
     margin-left: 120px;
     gap: 40px;
-    @include desktop{
-        margin-left: 75px;
+    @include desktop {
+      margin-left: 75px;
     }
-}
+  }
 
-.header__menu-link {
+  &__menu-link {
     display: block;
     padding: 24px 0;
     text-transform: capitalize;
     text-decoration: none;
+    color: var(--dark);
     @include font-medium;
+
+    &.active {
+      color: var(--primary-brand);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--primary-brand);
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    @include font-small;
+
+    @include desktop {
+      @include display-flex-between-center;
+      flex-direction: row;
+      gap: 40px;
+      @include font-body;
+    }
+  }
+  &__link--tel,
+  &__link--email {
+    color: var(--dark);
+    &:hover,
+    &:focus {
+      color: var(--primary-brand);
+    }
+  }
+}
+
+.logo {
+  @include font-logo;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &__blue-part {
+    color: var(--primary-brand);
+  }
 }
 
 .active {
-    position: relative;
-    display: block;
-}
+  position: relative;
+  display: block;
 
-.active::after {
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
@@ -83,25 +114,5 @@
     height: 4px;
     background: var(--primary-brand);
     border-radius: 2px;
-}
-
-.header__contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    @include font-small;
-
-    @include desktop{
-        @include display-flex-between-center;
-        flex-direction: row;
-        gap: 40px;
-        @include font-body;
-    }
-}
-
-.header__link--tel {
-    text-decoration: none;
-}
-.header__link--email {
-    text-decoration: none;
+  }
 }
