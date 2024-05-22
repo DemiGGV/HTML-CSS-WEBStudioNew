@@ -537,4 +537,7 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   width: 100%;
+}
+.footer__subscribe-button {
+  position: relative;
 }/*# sourceMappingURL=main.css.map */
